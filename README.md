@@ -1,14 +1,14 @@
 # brevo-tomcat-7
 Minimal example showing brevo's https://github.com/sendinblue/APIv3-java-library failing with tomcat 7
 
-The following should fail:
+The following fails:
 ```
 mvn clean tomcat7:run-war
 ```
 
-Whilst running unpacked should succeed:
+Whilst running unpacked succeeds:
 ```
-mvn clean tomcat7:run-war
+mvn clean tomcat7:run
 ```
 
 ## NoSuchFieldError: Companion
