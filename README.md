@@ -36,3 +36,26 @@ java.lang.NoSuchFieldError: Companion
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
+
+## Temporary fix
+
+Updating the transitive dependency in the API library is the temporary solution.
+
+```
+<dependency>
+	<groupId>com.sendinblue</groupId>
+	<artifactId>sib-api-v3-sdk</artifactId>
+	<version>7.0.0</version>
+	<exclusions>
+		<exclusion>
+			<groupId>com.squareup.okio</groupId>
+			<artifactId>okio</artifactId>
+		</exclusion>
+	</exclusions>
+</dependency>
+<dependency>
+	<groupId>com.squareup.okio</groupId>
+	<artifactId>okio</artifactId>
+	<version>3.0.0</version>
+</dependency>
+```
