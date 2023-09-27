@@ -37,9 +37,9 @@ java.lang.NoSuchFieldError: Companion
 	at java.base/java.lang.Thread.run(Thread.java:829)
 ```
 
-## Temporary fix
+## Temporary solution
 
-Updating the transitive dependency in the API library is the temporary solution.
+Updating the transitive dependency in the API library is a temporary solution.
 
 ```
 <dependency>
